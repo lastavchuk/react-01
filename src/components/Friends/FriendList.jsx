@@ -1,16 +1,17 @@
+import { StyledContainer } from 'components/Container/Container.styled';
+import { StyledSection } from 'components/Section/Section.styled';
 import PropTypes from 'prop-types';
 import Friend from './Friend';
-import s from './FriendList.module.css'
 
 function FriendList({ friends }) {
     return (
-        <section className="section">
-            <div className="container">
-                <ul className={s.friendList}>
+        <StyledSection>
+            <StyledContainer>
+                <ul>
                     <Friend friends={friends} />
                 </ul>
-            </div>
-        </section>
+            </StyledContainer>
+        </StyledSection>
     );
 }
 

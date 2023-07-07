@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledProfile = styled.div`
+const StyledProfile = styled.div`
     border-radius: 10px;
     box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
     background-color: #ffffff;
@@ -93,3 +93,5 @@ export const StyledProfile = styled.div`
         color: #000000;
     }
 `;
+
+export { StyledProfile };

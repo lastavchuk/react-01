@@ -1,37 +1,27 @@
-import s from './Statistics.module.css'
 import PropTypes from 'prop-types';
+import { StyledContainer } from 'components/Container/Container.styled';
+import { StyledSection } from 'components/Section/Section.styled';
+import StatisticItem from './StatisticItem';
+import { StyledStatistics } from './Statistics.styled';
 
 const Statistics = props => {
     const { title, stats } = props;
     return (
-        <section className="section">
-            <div className="container">
-                <div className={s.statistics}>
-                    {title && <h2 className={s.title}>{title}</h2>}
+        <StyledSection>
+            <StyledContainer>
+                <StyledStatistics>
+                    {title && <h2 className="title">{title}</h2>}
 
-                    <ul className={s.statList}>
+                    <ul className="statList">
                         {stats.map(el => {
-                            return (
-                                <li style={{backgroundColor: getRandomHexColor()} } className={s.item} key={el.id}>
-                                    <span className={s.label}>{el.label}</span>
-                                    <span className={s.percentage}>
-                                        {el.percentage}%
-                                    </span>
-                                </li>
-                            );
+                            return <StatisticItem item={el} key={el.id} />;
                         })}
                     </ul>
-                </div>
-            </div>
-        </section>
+                </StyledStatistics>
+            </StyledContainer>
+        </StyledSection>
     );
 };
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
 
 Statistics.propTypes = {
     title: PropTypes.string,

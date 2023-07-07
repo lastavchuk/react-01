@@ -1,5 +1,6 @@
-// import style from './Profile.module.css';
 import PropTypes from 'prop-types';
+import { StyledContainer } from 'components/Container/Container.styled';
+import { StyledSection } from 'components/Section/Section.styled';
 import { StyledProfile } from './Profile.styled';
 
 const Profile = ({
@@ -10,8 +11,8 @@ const Profile = ({
     stats: { followers = 0, views = 0, likes = 0 },
 }) => {
     return (
-        <section className="section">
-            <div className="container">
+        <StyledSection>
+            <StyledContainer>
                 <StyledProfile>
                     <div className="description">
                         <img src={avatar} alt={username} className="avatar" />
@@ -35,8 +36,8 @@ const Profile = ({
                         </li>
                     </ul>
                 </StyledProfile>
-            </div>
-        </section>
+            </StyledContainer>
+        </StyledSection>
     );
 };
 

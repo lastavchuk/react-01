@@ -1,11 +1,13 @@
-import s from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
+import { StyledContainer } from 'components/Container/Container.styled';
+import { StyledSection } from 'components/Section/Section.styled';
+import { StyledTransactionHistory } from './TransactionHistory.styled';
 
 function TransactionHistory({ items }) {
     return (
-        <section className="section">
-            <div className="container">
-                <table className={s.transactionHistory}>
+        <StyledSection>
+            <StyledContainer>
+                <StyledTransactionHistory>
                     <thead>
                         <tr>
                             <th>Type</th>
@@ -25,9 +27,9 @@ function TransactionHistory({ items }) {
                             );
                         })}
                     </tbody>
-                </table>
-            </div>
-        </section>
+                </StyledTransactionHistory>
+            </StyledContainer>
+        </StyledSection>
     );
 }
 
