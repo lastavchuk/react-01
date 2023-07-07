@@ -39,28 +39,3 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-.section {
-    padding-bottom: 30px;
-}
-.section:first-child {
-    padding-top: 20px;
-}
-.container {
-    max-width: 375px;
-    min-width: 320px;
-
-    margin-right: auto;
-    margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-    .section {
-        padding-bottom: 40px;
-    }
-    .section:first-child {
-        padding-top: 32px;
-    }
-    .container {
-        max-width: 768px;
-        width: 450px;
-    }
-}

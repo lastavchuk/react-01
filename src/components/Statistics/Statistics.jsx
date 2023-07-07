@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { StyledContainer } from 'components/Container/Container.styled';
-import { StyledSection } from 'components/Section/Section.styled';
-import StatisticItem from './StatisticItem';
 import { StyledStatistics } from './Statistics.styled';
+import StatisticItem from './StatisticItem';
+import { StyledSection } from 'shared/styles/Section.styled';
+import { StyledContainer } from 'shared/styles/Container.styled';
 
 const Statistics = props => {
     const { title, stats } = props;

@@ -1,6 +1,6 @@
-import { StyledContainer } from 'components/Container/Container.styled';
-import { StyledSection } from 'components/Section/Section.styled';
 import PropTypes from 'prop-types';
+import { StyledContainer } from 'shared/styles/Container.styled';
+import { StyledSection } from 'shared/styles/Section.styled';
 import Friend from './Friend';
 
 function FriendList({ friends }) {
@@ -8,7 +8,9 @@ function FriendList({ friends }) {
         <StyledSection>
             <StyledContainer>
                 <ul>
-                    <Friend friends={friends} />
+                    {friends.map(friend => (
+                        <Friend friend={friend} key={friend.id} />
+                    ))}
                 </ul>
             </StyledContainer>
         </StyledSection>
