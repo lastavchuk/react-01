@@ -1,5 +1,6 @@
-import style from './Profile.module.css';
+// import style from './Profile.module.css';
 import PropTypes from 'prop-types';
+import { StyledProfile } from './Profile.styled';
 
 const Profile = ({
     username,
@@ -11,33 +12,29 @@ const Profile = ({
     return (
         <section className="section">
             <div className="container">
-                <div className={style.profile}>
-                    <div className={style.description}>
-                        <img
-                            src={avatar}
-                            alt={username}
-                            className={style.avatar}
-                        />
-                        <p className={style.name}>{username}</p>
-                        <p className={style.tag}>@{tag}</p>
-                        <p className={style.location}>{location}</p>
+                <StyledProfile>
+                    <div className="description">
+                        <img src={avatar} alt={username} className="avatar" />
+                        <p className="name">{username}</p>
+                        <p className="tag">@{tag}</p>
+                        <p className="location">{location}</p>
                     </div>
 
-                    <ul className={style.stats}>
-                        <li className={style.listItem}>
-                            <span className={style.label}>Followers</span>
-                            <span className={style.quantity}>{followers}</span>
+                    <ul className="stats">
+                        <li className="listItem">
+                            <span className="label">Followers</span>
+                            <span className="quantity">{followers}</span>
                         </li>
-                        <li className={style.listItem}>
-                            <span className={style.label}>Views</span>
-                            <span className={style.quantity}>{views}</span>
+                        <li className="listItem">
+                            <span className="label">Views</span>
+                            <span className="quantity">{views}</span>
                         </li>
-                        <li className={style.listItem}>
-                            <span className={style.label}>Likes</span>
-                            <span className={style.quantity}>{likes}</span>
+                        <li className="listItem">
+                            <span className="label">Likes</span>
+                            <span className="quantity">{likes}</span>
                         </li>
                     </ul>
-                </div>
+                </StyledProfile>
             </div>
         </section>
     );
